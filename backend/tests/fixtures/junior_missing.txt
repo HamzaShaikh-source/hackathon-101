@@ -1,0 +1,8 @@
+Jamie Lee
+jamie.lee@example.com
+
+PROFESSIONAL SUMMARY
+Recent computer science graduate looking to start a career in software engineering. No professional work experience yet.
+
+TECHNICAL SKILLS
+HTML, CSS

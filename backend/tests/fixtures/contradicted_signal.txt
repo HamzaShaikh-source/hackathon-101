@@ -1,0 +1,8 @@
+Sam Okafor
+sam.okafor@example.com
+
+PROFESSIONAL SUMMARY
+Engineer with 5 years of professional experience. No experience with Kubernetes or container orchestration.
+
+TECHNICAL SKILLS
+Python, AWS

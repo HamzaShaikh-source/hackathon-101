@@ -1,0 +1,8 @@
+Dana Reyes
+dana.reyes@example.com
+
+PROFESSIONAL SUMMARY
+Backend engineer with 6 years of professional experience in Python and FastAPI, specializing in PostgreSQL-backed APIs and Docker deployments.
+
+TECHNICAL SKILLS
+Python, FastAPI, PostgreSQL, Docker
