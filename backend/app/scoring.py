@@ -11,6 +11,9 @@ import re
 from typing import Any
 
 
+__all__ = ["score_candidate"]
+
+
 _TOKEN_RE = re.compile(r"[a-z0-9][a-z0-9+#./-]*", re.IGNORECASE)
 _YEARS_RE = re.compile(r"(?P<number>\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)", re.IGNORECASE)
 _STOP_WORDS = {
