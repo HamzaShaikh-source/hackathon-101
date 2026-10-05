@@ -54,11 +54,18 @@ def _experience_requirement(text: str) -> float | None:
     return float(matches[0].group("number"))
 
 
+def _safe_float(value: Any, default: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def _experience_evidence(candidate: dict, requirement: dict) -> tuple[str, float, str] | None:
     minimum = _experience_requirement(str(requirement.get("text", "")))
     if minimum is None:
         return None
-    actual = float(candidate.get("experience_years") or 0)
+    actual = _safe_float(candidate.get("experience_years"))
     source = f"{actual:g} years of experience (extracted candidate fact); requirement: {minimum:g}+ years"
     if actual >= minimum:
         return source, 0.98, "verified"
@@ -139,7 +146,7 @@ def _existing_decision(candidate: dict, requirement_id: str) -> dict | None:
             if status in {"verified", "contradicted", "uncertain", "missing"}:
                 return {
                     "snippet": str(item.get("snippet") or "No supporting resume text found."),
-                    "confidence": round(max(0.0, min(1.0, float(item.get("confidence") or 0))), 2),
+                    "confidence": round(max(0.0, min(1.0, _safe_float(item.get("confidence")))), 2),
                     "status": status,
                 }
     return None
