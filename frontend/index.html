@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidence-First Resume Triage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand-row">
+        <h1 class="brand-title">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Evidence-First Resume Triage
+        </h1>
+        <div class="header-links">
+          <a id="nav-dashboard-link" href="dashboard.html" title="Jump to Candidate Dashboard">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="9"></rect>
+              <rect x="14" y="3" width="7" height="5"></rect>
+              <rect x="14" y="12" width="7" height="9"></rect>
+              <rect x="3" y="16" width="7" height="5"></rect>
+            </svg>
+            Dashboard
+          </a>
+        </div>
+      </div>
+      <p class="brand-subtitle">
+        Intelligent, defensible resume screening. Extract explicit must-have and nice-to-have requirements, upload candidate resumes, and inspect verified source snippets.
+      </p>
+    </header>
+
+    <!-- Transparency & Decision-Support Notice -->
+    <div class="notice-banner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="m9 12 2 2 4-4"></path>
+      </svg>
+      <div>
+        <p><strong>Decision Support Tool:</strong> Rankings are strictly derived from verified or accepted candidate evidence. No opaque scores or hidden weights.</p>
+      </div>
+    </div>
+
+    <!-- Step 1: Job Description Input -->
+    <section class="step-card" id="step-job">
+      <div class="card-header">
+        <div class="step-indicator">
+          <span class="step-badge" id="step-1-badge">1</span>
+          <h2 class="step-title">Job Description &amp; Requirements</h2>
+        </div>
+        <div class="card-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="btn-load-sample">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            Load Sample Job
+          </button>
+          <button type="button" class="btn btn-outline btn-sm" id="btn-clear-job">Clear</button>
+        </div>
+      </div>
+
+      <form id="job-form">
+        <div class="form-group">
+          <label for="job-description" class="form-label">Paste full job description below:</label>
+          <textarea
+            id="job-description"
+            class="form-textarea"
+            placeholder="Paste your job description here (including responsibilities, qualifications, required skills, and nice-to-have requirements)..."
+            required
+          ></textarea>
+        </div>
+
+        <div id="job-alert" class="alert alert-danger hidden"></div>
+
+        <div class="flex-end">
+          <button type="submit" class="btn btn-primary" id="btn-submit-job">
+            <span class="btn-text">Extract Requirements</span>
+            <span class="spinner hidden" id="job-spinner"></span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Extracted Requirements Container -->
+      <div id="requirements-container" class="requirements-summary hidden">
+        <div class="job-meta-bar">
+          <div>
+            <strong>Active Job ID:</strong>
+            <span class="job-id-tag" id="display-job-id"></span>
+          </div>
+          <div class="req-counts">
+            <span id="must-count-badge" class="req-badge must">0 Must-Have</span>
+            <span id="nice-count-badge" class="req-badge nice">0 Nice-to-Have</span>
+          </div>
+        </div>
+
+        <div class="req-grid" id="requirements-list">
+          <!-- Populated dynamically via upload.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 2: Resume Upload Form -->
+    <section class="step-card disabled" id="step-upload">
+      <div class="card-header">
+        <div class="step-indicator">
+          <span class="step-badge" id="step-2-badge">2</span>
+          <h2 class="step-title">Upload Candidate Resumes</h2>
+        </div>
+        <span class="req-badge nice" id="upload-status-badge">Requires Active Job</span>
+      </div>
+
+      <p class="dropzone-desc" style="margin-bottom: 1rem;">
+        Upload resumes for this job. Supported formats: <strong>.pdf, .docx, .txt</strong>. Multiple files supported.
+      </p>
+
+      <form id="resume-form">
+        <div class="dropzone" id="dropzone">
+          <input
+            type="file"
+            id="resume-files"
+            class="file-input-hidden"
+            accept=".pdf,.docx,.txt"
+            multiple
+          >
+          <div class="dropzone-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <div class="dropzone-title">Drag &amp; drop candidate resumes here</div>
+          <div class="dropzone-desc">or click anywhere to browse files</div>
+        </div>
+
+        <!-- Selected files queue -->
+        <div id="file-list" class="file-list"></div>
+
+        <div id="upload-alert" class="alert alert-danger hidden"></div>
+
+        <div class="flex-end mt-4">
+          <button type="submit" class="btn btn-primary" id="btn-submit-upload" disabled>
+            <span class="btn-text">Upload &amp; Analyze Resumes</span>
+            <span class="spinner hidden" id="upload-spinner"></span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Upload Success and Link to Dashboard -->
+      <div id="upload-success-section" class="success-banner hidden">
+        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 0.5rem;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <h3 id="success-title">Resumes Processed Successfully</h3>
+        <p id="success-desc">Extracted structured facts and mapped evidence to job requirements.</p>
+
+        <a id="btn-goto-dashboard" href="dashboard.html" class="btn btn-primary btn-lg">
+          Open Evidence Queue &amp; Ranking Dashboard &rarr;
+        </a>
+
+        <div class="candidates-preview" id="candidates-preview">
+          <h4>Uploaded Candidates (<span id="candidate-count">0</span>)</h4>
+          <table class="preview-table">
+            <thead>
+              <tr>
+                <th>Candidate Name</th>
+                <th>Email</th>
+                <th>Experience</th>
+                <th>Skills Extracted</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="candidates-tbody">
+              <!-- Populated dynamically via upload.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="upload.js"></script>
+</body>
+</html>
