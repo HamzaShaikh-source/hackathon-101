@@ -1,0 +1,33 @@
+Eva Rostova
+Email: eva.rostova@example.com
+Phone: (555) 678-9012
+Location: New York, NY
+GitHub: github.com/evarostova-ml
+
+SUMMARY
+Data & Machine Learning Engineer with 5 years of professional experience developing natural language processing (NLP) pipelines, structured data extraction systems, and predictive models. Expert in Python, PyTorch, spaCy, and database integrations.
+
+PROFESSIONAL EXPERIENCE
+
+Senior Data Engineer | Cognitive Insight Analytics
+February 2021 - Present | New York, NY
+- Built end-to-end NLP information extraction pipelines in Python using spaCy, HuggingFace, and PyMuPDF to extract structured entities from unstructured documents.
+- Deployed REST inference APIs utilizing FastAPI and Docker on AWS ECS with automated health checks.
+- Architected data storage pipelines writing extracted entity attributes into PostgreSQL and SQLite data stores.
+- Designed automated validation rubrics to benchmark model precision, recall, and certainty scores against human labels.
+
+Data Scientist | Lexicon Data Labs
+July 2019 - January 2021 | Boston, MA
+- Created machine learning classification algorithms in Python with scikit-learn and Pandas.
+- Implemented text tokenization and regex extraction scripts for legal and financial contracts.
+- Automated data reporting and analytics workflows using SQL and Python.
+
+SKILLS
+- Languages: Python, SQL, R, Bash
+- NLP & ML: spaCy, PyTorch, scikit-learn, HuggingFace, PyMuPDF, Pandas, NumPy
+- Backend & Cloud: FastAPI, Flask, PostgreSQL, SQLite, Docker, AWS (S3, ECS)
+- Best Practices: Data pipeline automation, Git, PyTest, CI/CD
+
+EDUCATION
+Master of Science in Data Science | Columbia University, 2019
+Bachelor of Science in Applied Mathematics | Boston University, 2017

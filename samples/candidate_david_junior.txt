@@ -1,0 +1,31 @@
+David Patel
+Email: david.patel@example.com
+Phone: (555) 567-8901
+Location: Chicago, IL
+Portfolio: davidpatel-dev.net
+
+OBJECTIVE
+Motivated Junior Software Engineer with 1.5 years of industry experience eager to contribute full-stack capabilities, Python web programming, and agile teamwork to innovative engineering initiatives.
+
+EXPERIENCE
+
+Associate Software Engineer | Midwest Tech Solutions
+October 2022 - Present | Chicago, IL
+- Assisted in building and refactoring RESTful web endpoints with Python, Flask, and SQLite.
+- Created responsive frontend pages with semantic HTML5, CSS3, and modern vanilla JavaScript.
+- Wrote automated unit tests with PyTest to validate form inputs and API payload schemas.
+- Participated in weekly code reviews and updated team documentation for API endpoints.
+
+Software Engineering Intern | NextGen Cloud Labs
+June 2022 - August 2022 | Chicago, IL
+- Designed a lightweight internal script in Python to parse daily log files and flag HTTP error rates.
+- Supported frontend enhancements using JavaScript and Bootstrap.
+
+TECHNICAL EXPERTISE
+- Programming Languages: Python, JavaScript, HTML, CSS, SQL
+- Frameworks & Libraries: Flask, React (Foundational), SQLite, Bootstrap
+- Developer Tools: Git, GitHub, VS Code, Postman, Linux basics
+
+EDUCATION
+Bachelor of Science in Information Technology
+University of Illinois at Urbana-Champaign | Graduated May 2022
