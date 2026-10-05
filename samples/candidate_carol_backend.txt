@@ -1,0 +1,34 @@
+Carol Vance
+Email: carol.vance@example.com
+Phone: (555) 456-7890
+Location: Seattle, WA
+GitHub: github.com/carolvance
+
+PROFESSIONAL SUMMARY
+Backend Software Engineer with 4 years of experience specializing in server-side distributed systems, database reliability, and asynchronous task processing. Deep expertise in Python, Django, PostgreSQL, and Linux server environments.
+
+WORK EXPERIENCE
+
+Backend Systems Engineer | DataBridge Networks
+May 2021 - Present | Seattle, WA
+- Built resilient API gateways and message queues utilizing Python, Django REST Framework, and Celery with Redis brokers.
+- Optimized high-volume PostgreSQL database queries and connection pools, ensuring 99.98% service uptime under heavy load.
+- Automated service provisioning, container orchestration, and container security scanning using Docker and Kubernetes.
+- Engineered automated data extraction scripts converting raw XML and text files into normalized SQL databases.
+
+Software Developer | Cascade Digital Systems
+August 2020 - April 2021 | Seattle, WA
+- Developed backend microservices using Python and Flask connecting to SQLite and PostgreSQL datastores.
+- Implemented JWT token authentication and role-based access control (RBAC) across multi-tenant customer portals.
+- Established automated test pipelines in GitLab CI and PyTest with comprehensive mock integration tests.
+
+TECHNICAL SKILLS
+- Languages: Python, SQL, Bash
+- Backend Frameworks: Django, Django REST Framework, Flask, Celery, SQLAlchemy
+- Databases: PostgreSQL, SQLite, Redis
+- Infrastructure: Linux, Docker, Kubernetes, AWS (EC2, S3, RDS), Git, CI/CD
+- Testing: PyTest, unittest, coverage.py
+
+EDUCATION
+Bachelor of Science in Computer Engineering
+University of Washington | 2016 - 2020

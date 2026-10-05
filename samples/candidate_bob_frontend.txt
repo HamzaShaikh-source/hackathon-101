@@ -1,0 +1,34 @@
+Bob Martinez
+Email: bob.martinez@example.com
+Phone: (555) 345-6789
+Location: Austin, TX
+GitHub: github.com/bmartinez-frontend
+
+SUMMARY
+Frontend Engineer with 5 years of specialized experience in crafting responsive, performant, and accessible user interfaces using React, Next.js, and modern CSS systems. Working knowledge of backend Python scripts and REST API integration.
+
+PROFESSIONAL EXPERIENCE
+
+Lead Frontend Developer | PixelCraft Studio
+January 2021 - Present | Austin, TX
+- Led frontend development of a design system used across 12 internal and customer-facing web apps using React and TypeScript.
+- Implemented state management using Zustand and TanStack Query, optimizing client cache efficiency and payload sizes.
+- Built accessible forms, complex data tables, and interactive dashboards complying with WCAG 2.1 AA standards.
+- Partnered with backend engineers consuming RESTful endpoints and contributed Python helper scripts for mock API data generation.
+
+Frontend Web Developer | LaunchPoint Interactive
+June 2019 - December 2020 | Austin, TX
+- Developed modular single-page web applications with React, Redux, and Tailwind CSS.
+- Converted Figma design tokens into clean, reusable CSS utility classes and design tokens.
+- Enhanced web performance and Core Web Vitals, achieving 95+ Google Lighthouse scores across landing and checkout pages.
+- Collaborated in an agile Scrum environment participating in sprint planning and peer code reviews.
+
+SKILLS
+- Core: JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS
+- Frontend Frameworks: React, Next.js, Vue.js, Tailwind CSS, Material UI
+- State & Data: Redux Toolkit, Zustand, GraphQL, REST APIs
+- Other Tech: Git, Webpack, Vite, Docker, Python (basic scripting), Jest, Cypress
+
+EDUCATION
+Bachelor of Arts in Interactive Media & Web Design
+University of Texas at Austin | 2015 - 2019

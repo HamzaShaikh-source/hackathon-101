@@ -1,0 +1,36 @@
+Alice Chen
+Email: alice.chen@example.com
+Phone: (555) 234-5678
+Location: San Francisco, CA
+LinkedIn: linkedin.com/in/alicechen-dev
+
+PROFESSIONAL SUMMARY
+Senior Full-Stack Engineer with 6 years of experience building resilient web applications, data extraction pipelines, and RESTful APIs. Proven track record in Python backend architectures, modern React interfaces, and cloud-native database optimization. Passionate about transparent software systems and automated verification.
+
+EXPERIENCE
+
+Senior Software Engineer | CloudScale Systems
+March 2021 - Present | San Francisco, CA
+- Architected and maintained high-throughput microservices using Python and FastAPI, serving over 1.2M daily active requests.
+- Developed interactive frontend dashboards in React and TypeScript with accessible UI components and real-time state management.
+- Designed PostgreSQL schemas, optimized query plans with pgvector and full-text indexing, reducing p99 latency by 38%.
+- Integrated PyMuPDF and document parsing libraries to ingest unstructured PDF reports and extract key structured metrics.
+- Spearheaded CI/CD pipelines using GitHub Actions and Docker containerization for seamless blue-green deployments.
+
+Software Engineer | FinFlow Technologies
+July 2018 - February 2021 | San Jose, CA
+- Built financial reporting REST APIs using Python and Django with SQLite and PostgreSQL backends.
+- Created responsive data visualization interfaces in modern JavaScript (ES6+), React, and Redux.
+- Collaborated with product and compliance teams to enforce automated data validation and audit logging.
+- Wrote comprehensive unit and integration tests achieving 92% code coverage across core billing engines.
+
+TECHNICAL SKILLS
+- Programming Languages: Python, JavaScript, TypeScript, SQL, Bash
+- Backend & Frameworks: FastAPI, Django, Flask, Node.js, REST APIs, Celery
+- Frontend: React, Redux, HTML5, CSS3, Tailwind CSS, Vite
+- Databases & Storage: PostgreSQL, SQLite, Redis
+- Tools & DevOps: Docker, Git, GitHub Actions, Linux, PyMuPDF, PyTest
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of California, Berkeley | 2014 - 2018
